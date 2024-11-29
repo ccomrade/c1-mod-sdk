@@ -8,7 +8,7 @@ Description: Radar Scanning Fire Mode Implementation
 
 -------------------------------------------------------------------------
 History:
-- 18:1:2007   15:17 : Created by Márcio Martins
+- 18:1:2007   15:17 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __SCAN_H__

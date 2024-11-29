@@ -13,7 +13,7 @@ can use the cursor not at the same time be successively
 
 -------------------------------------------------------------------------
 History:
-- 18:12:2006   Created by Julien Darré
+- 18:12:2006   Created by Julien Darre
 
 *************************************************************************/
 #ifndef __IHARDWAREMOUSE_H__

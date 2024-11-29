@@ -9,7 +9,7 @@ between profile, system and flash.
 
 -------------------------------------------------------------------------
 History:
-- 03/2007: Created by Jan Müller
+- 03/2007: Created by Jan Muller
 
 *************************************************************************/
 #ifndef __OPTIONS_MANAGER_H__

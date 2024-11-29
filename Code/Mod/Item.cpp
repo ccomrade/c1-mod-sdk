@@ -7,7 +7,7 @@
   
  -------------------------------------------------------------------------
   History:
-  - 27:10:2004   11:26 : Created by Márcio Martins
+  - 27:10:2004   11:26 : Created by Marcio Martins
 
 *************************************************************************/
 #include "StdAfx.h"
@@ -34,7 +34,7 @@
 #include "WeaponAttachmentManager.h"
 
 
-#pragma warning(disable: 4355)	// ´this´ used in base member initializer list
+#pragma warning(disable: 4355)	// 'this' used in base member initializer list
 
 #if defined(USER_alexll)
 #define ITEM_DEBUG_MEMALLOC

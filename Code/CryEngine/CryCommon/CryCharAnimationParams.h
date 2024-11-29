@@ -88,7 +88,7 @@ enum CA_AnimationFlags
 	//When we play an animation we update every bone in the skeleton, even if a certain joint has no controller. 
 	//That means, that full-skeleton animation is enabled by default. Animators are told to create animation-assets 
 	//by using the smallest amount of controllers (=animation-channels per joint) that is possible to safe memory. 
-	//For fast animations (e.g. a sprint) you don’t need finger animations. If a bone has no controller, we take 
+	//For fast animations (e.g. a sprint) you don't need finger animations. If a bone has no controller, we take 
 	//the default value stored in the rig. For some mechanical objects (weapons, vehicles) or special animation (e.g. upper-body animations) 
 	//we want to use only the the exiting controllers in the animations. This flag is disabling full-body animation update.   
 	CA_PARTIAL_SKELETON_UPDATE	=0x0100, //Update just bones with controller. Don't use default value for missing controllers.

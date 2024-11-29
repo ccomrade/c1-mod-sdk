@@ -8,7 +8,7 @@ Description: C++ Weapon Implementation
 
 -------------------------------------------------------------------------
 History:
-- 22:8:2005   12:50 : Created by Márcio Martins
+- 22:8:2005   12:50 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __WEAPON_H__

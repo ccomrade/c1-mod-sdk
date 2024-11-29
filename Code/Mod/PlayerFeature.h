@@ -8,7 +8,7 @@ Description: Player Feature Enabling Item
 
 -------------------------------------------------------------------------
 History:
-- 23:10:2006   12:25 : Created by Márcio Martins
+- 23:10:2006   12:25 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __PLAYERFEATURE_H__

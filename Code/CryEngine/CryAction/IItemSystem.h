@@ -8,7 +8,7 @@ Description: Item System interfaces.
 
 -------------------------------------------------------------------------
 History:
-- 1:9:2004   19:52 : Created by Márcio Martins
+- 1:9:2004   19:52 : Created by Marcio Martins
 - 20:6:2005        : Changed IItem to be a game object extension by Craig Tiller
 
 *************************************************************************/

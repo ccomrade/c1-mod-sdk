@@ -8,7 +8,7 @@ Description: Vehicle HUD object (refactored from old HUD code)
 
 -------------------------------------------------------------------------
 History:
-- 21:02:2007  16:00 : Created by Jan Müller
+- 21:02:2007  16:00 : Created by Jan Muller
 
 *************************************************************************/
 

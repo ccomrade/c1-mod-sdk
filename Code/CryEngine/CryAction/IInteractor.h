@@ -8,7 +8,7 @@ Description: Interactor interface.
 
 -------------------------------------------------------------------------
 History:
-- 26:6:2006   17:06 : Created by Márcio Martins
+- 26:6:2006   17:06 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __IINTERACTOR_H__

@@ -8,7 +8,7 @@ Description: HUD score board for multiplayer
 
 -------------------------------------------------------------------------
 History:
-- 27:03:2006: Created by Jan Müller
+- 27:03:2006: Created by Jan Muller
 
 *************************************************************************/
 #ifndef __HUDSCORE_H__

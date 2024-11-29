@@ -8,7 +8,7 @@ Description: HUD text chat - receives text input and broadcasts it to other play
 
 -------------------------------------------------------------------------
 History:
-- 07:03:2006: Created by Jan Müller
+- 07:03:2006: Created by Jan Muller
 
 *************************************************************************/
 #ifndef __HUDTEXTCHAT_H__

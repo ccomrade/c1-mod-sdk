@@ -8,7 +8,7 @@ Description: Beam Fire Mode Implementation
 
 -------------------------------------------------------------------------
 History:
-- 19:12:2005   12:16 : Created by Márcio Martins
+- 19:12:2005   12:16 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __BEAM_H__

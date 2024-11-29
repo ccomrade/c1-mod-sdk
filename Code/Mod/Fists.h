@@ -8,7 +8,7 @@ Description: OffHand Implementation
 
 -------------------------------------------------------------------------
 History:
-- 26:04:2006   18:35 : Created by Márcio Martins
+- 26:04:2006   18:35 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __FISTS_H__

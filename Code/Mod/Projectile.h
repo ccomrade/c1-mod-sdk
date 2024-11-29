@@ -8,7 +8,7 @@ Description: Projectile
 
 -------------------------------------------------------------------------
 History:
-- 12:10:2005   11:15 : Created by Márcio Martins
+- 12:10:2005   11:15 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __PROJECTILE_H__

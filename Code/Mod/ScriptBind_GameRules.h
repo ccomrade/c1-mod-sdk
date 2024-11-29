@@ -8,7 +8,7 @@ Description: Script Binding for GameRules
 
 -------------------------------------------------------------------------
 History:
-- 23:2:2006   18:30 : Created by Márcio Martins
+- 23:2:2006   18:30 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __SCRIPTBIND_GAMERULES_H__

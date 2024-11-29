@@ -1074,7 +1074,7 @@ bool CPlayerInput::OnActionRotatePitch(EntityId entityId, const ActionId& action
 	{
 	SPlayerStats *stats = static_cast<SPlayerStats*> (m_pPlayer->GetActorStats());
 	float absAngle = fabsf(acos_tpl(stats->upVector.Dot(stats->zeroGUp)));
-	if(absAngle > 1.57f) //90°
+	if(absAngle > 1.57f) //90 degree
 	{
 	if(value > 0)
 	m_deltaRotation.x -= value;

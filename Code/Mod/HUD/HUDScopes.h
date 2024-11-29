@@ -8,7 +8,7 @@ Description: Binocular/Scopes HUD object (refactored from old HUD code)
 
 -------------------------------------------------------------------------
 History:
-- 17:04:2007  17:30 : Created by Jan Müller
+- 17:04:2007  17:30 : Created by Jan Muller
 
 *************************************************************************/
 

@@ -8,7 +8,7 @@ Description:
 
 -------------------------------------------------------------------------
 History:
-- 5:7:2006   16:00 : Created by Márcio Martins
+- 5:7:2006   16:00 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __SERVERSYNCHEDSTORAGE_H__

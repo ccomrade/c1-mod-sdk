@@ -10,9 +10,9 @@ Description:
 -------------------------------------------------------------------------
 History:
 - 07:11:2005: Created by Julien Darre
-- 01:02:2006: Modified by Jan Müller
+- 01:02:2006: Modified by Jan Muller
 - 22:02:2006: Refactored for G04 by Matthew Jack
-- 2007: Refactored by Jan Müller
+- 2007: Refactored by Jan Muller
 
 *************************************************************************/
 #ifndef __HUD_H__

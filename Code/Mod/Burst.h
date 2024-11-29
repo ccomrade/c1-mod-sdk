@@ -8,7 +8,7 @@ Description: Burst Fire Mode Implementation
 
 -------------------------------------------------------------------------
 History:
-- 26:10:2005   12:15 : Created by Márcio Martins
+- 26:10:2005   12:15 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __BURST_H__

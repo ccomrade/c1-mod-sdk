@@ -7,7 +7,7 @@
   
  -------------------------------------------------------------------------
   History:
-  - 3:8:2004   11:26 : Created by Márcio Martins
+  - 3:8:2004   11:26 : Created by Marcio Martins
   - 17:8:2005        : Modified - NickH: Factory registration moved to GameFactory.cpp
 
 *************************************************************************/

@@ -8,7 +8,7 @@ Description: Parameter reading helper...
 
 -------------------------------------------------------------------------
 History:
-- 27:10:2004   11:30 : Created by Márcio Martins
+- 27:10:2004   11:30 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __ITEMPARAMREADER_H__

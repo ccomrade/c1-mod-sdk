@@ -8,7 +8,7 @@ Description: Item Scheduler
 
 -------------------------------------------------------------------------
 History:
-- 1:9:2005   11:33 : Created by Márcio Martins
+- 1:9:2005   11:33 : Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __ITEMSCHEDULER_H__

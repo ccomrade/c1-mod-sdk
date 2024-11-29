@@ -8,7 +8,7 @@ Description: Work Firemode Implementation
 
 -------------------------------------------------------------------------
 History:
-- 05:08:2007:		Created by Márcio Martins
+- 05:08:2007:		Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __WORKONTARGET_H__

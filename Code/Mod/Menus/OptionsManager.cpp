@@ -8,7 +8,7 @@ Description: Handles options setting, getting, saving and loading.
 
 -------------------------------------------------------------------------
 History:
-- 03/2007: Created by Jan Müller
+- 03/2007: Created by Jan Muller
 
 *************************************************************************/
 

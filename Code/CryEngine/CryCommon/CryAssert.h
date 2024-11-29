@@ -41,7 +41,7 @@ History:
 // Use like this:
 // CRY_ASSERT(expression);
 // CRY_ASSERT_MESSAGE(expression,"Useful message");
-// CRY_ASSERT_TRACE(expression,("This should never happen because parameter n°%d named %s is %f",iParameter,szParam,fValue));
+// CRY_ASSERT_TRACE(expression,("This should never happen because parameter %d named %s is %f",iParameter,szParam,fValue));
 //-----------------------------------------------------------------------------------------------------
 
 #if defined(USE_CRY_ASSERT) && defined(_DEBUG) && defined(WIN32)

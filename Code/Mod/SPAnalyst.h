@@ -10,7 +10,7 @@
 //  Description: SPAnalyst to track/serialize some SP stats
 // -------------------------------------------------------------------------
 //  History:
-//	 - 09:11:2007        : Modified - Jan Müller: Added SP gameplay to file recording
+//	 - 09:11:2007        : Modified - Jan Muller: Added SP gameplay to file recording
 //
 ////////////////////////////////////////////////////////////////////////////
 

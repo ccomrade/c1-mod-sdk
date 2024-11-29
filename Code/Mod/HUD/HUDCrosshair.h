@@ -8,7 +8,7 @@ Description: Crosshair HUD object (refactored from old HUD code)
 
 -------------------------------------------------------------------------
 History:
-- 15:05:2007  11:00 : Created by Jan Müller
+- 15:05:2007  11:00 : Created by Jan Muller
 
 *************************************************************************/
 

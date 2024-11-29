@@ -8,7 +8,7 @@ Description: PowerStruggle mode HUD code (refactored from old HUD code)
 
 -------------------------------------------------------------------------
 History:
-- 21:02:20067  20:00 : Created by Jan Müller
+- 21:02:20067  20:00 : Created by Jan Muller
 
 *************************************************************************/
 

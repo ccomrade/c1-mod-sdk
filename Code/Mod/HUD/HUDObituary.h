@@ -8,7 +8,7 @@ Description: HUD obituary - receives player death messages in multiplayer.
 
 -------------------------------------------------------------------------
 History:
-- 09:06:2006: Created by Márcio Martins
+- 09:06:2006: Created by Marcio Martins
 
 *************************************************************************/
 #ifndef __HUDOBITUARY_H__

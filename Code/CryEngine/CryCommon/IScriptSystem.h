@@ -324,7 +324,7 @@ struct IScriptSystem
 			
 	*/
 	//##@{
-	virtual int BeginCall(HSCRIPTFUNCTION hFunc) = 0;						 // Márcio: changed the return type 
+	virtual int BeginCall(HSCRIPTFUNCTION hFunc) = 0;						 // Marcio: changed the return type 
 	// Calls a named method inside specified table.
 	virtual int BeginCall(const char *sFuncName) = 0;						 // from void to int for error checking
 	virtual int BeginCall(const char *sTableName, const char *sFuncName) = 0;//
