@@ -1550,7 +1550,9 @@ bool CSingle::Shoot(bool resetAnimation, bool autoreload, bool noSound)
 	}
 
 	if (m_pWeapon->IsServer())
-		g_pGame->GetIGameFramework()->GetIGameplayRecorder()->Event(m_pWeapon->GetOwner(), GameplayEvent(eGE_WeaponShot, ammo->GetName(), 1, (void *)m_pWeapon->GetEntityId()));
+		g_pGame->GetIGameFramework()->GetIGameplayRecorder()->Event(m_pWeapon->GetOwner(),
+			GameplayEvent(eGE_WeaponShot, ammo->GetName(), 1,
+				reinterpret_cast<void*>(static_cast<uintptr_t>(m_pWeapon->GetEntityId()))));
 
   m_pWeapon->OnShoot(m_pWeapon->GetOwnerId(), pAmmo?pAmmo->GetEntity()->GetId():0, ammo, pos, dir, vel);
 
@@ -2833,7 +2835,9 @@ void CSingle::NetShootEx(const Vec3 &pos, const Vec3 &dir, const Vec3 &vel, cons
 	}
 
 	if (m_pWeapon->IsServer())
-		g_pGame->GetIGameFramework()->GetIGameplayRecorder()->Event(m_pWeapon->GetOwner(), GameplayEvent(eGE_WeaponShot, ammo->GetName(), 1, (void *)m_pWeapon->GetEntityId()));
+		g_pGame->GetIGameFramework()->GetIGameplayRecorder()->Event(m_pWeapon->GetOwner(),
+			GameplayEvent(eGE_WeaponShot, ammo->GetName(), 1,
+				reinterpret_cast<void*>(static_cast<uintptr_t>(m_pWeapon->GetEntityId()))));
 
   m_pWeapon->OnShoot(m_pWeapon->GetOwnerId(), pAmmo?pAmmo->GetEntity()->GetId():0, ammo, pos, dir, vel);
 

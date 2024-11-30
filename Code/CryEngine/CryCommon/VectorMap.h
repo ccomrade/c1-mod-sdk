@@ -68,7 +68,7 @@ public:
 
 	typedef T key_compare;
 
-	class FirstLess : public std::binary_function<value_type, value_type, bool>
+	class FirstLess
 	{
 	public:
 		FirstLess(const key_compare& comp): m_comp(comp) {}

@@ -1104,7 +1104,8 @@ void CGameRules::KillPlayer(CActor *pActor, bool dropItem, bool ragdoll, EntityI
 	m_pGameplayRecorder->Event(pActor->GetEntity(), GameplayEvent(eGE_Death));
 	if (shooterId && shooterId!=pActor->GetEntityId())
 		if (IActor *pShooter=m_pGameFramework->GetIActorSystem()->GetActor(shooterId))
-			m_pGameplayRecorder->Event(pShooter->GetEntity(), GameplayEvent(eGE_Kill, 0, 0, (void *)weaponId));
+			m_pGameplayRecorder->Event(pShooter->GetEntity(), GameplayEvent(eGE_Kill, 0, 0,
+				reinterpret_cast<void*>(static_cast<uintptr_t>(weaponId))));
 }
 
 //------------------------------------------------------------------------

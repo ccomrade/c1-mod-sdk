@@ -85,7 +85,7 @@ public:
 	}
 	CChaosKey Jumble(void const* ptr) const
 	{
-		return CChaosKey( Jumble(m_Key ^ (uint32)ptr) );
+		return CChaosKey( Jumble(m_Key ^ static_cast<uint32_t>(reinterpret_cast<uintptr_t>(ptr))) );
 	}
 
 	// Scale input range.

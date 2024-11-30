@@ -350,7 +350,7 @@ typedef struct _SECURITY_ATTRIBUTES
 	}
 
 
-	typedef enum {INVALID_HANDLE_VALUE = -1l}INVALID_HANDLE_VALUE_ENUM;
+	enum INVALID_HANDLE_VALUE_ENUM { INVALID_HANDLE_VALUE = -1l };
 	//for compatibility reason we got to create a class which actually contains an int rather than a void* and make sure it does not get mistreated
 	template <class T, T U>//U is default type for invalid handle value, T the encapsulated handle type to be used instead of void* (as under windows and never linux)
 	class CHandle

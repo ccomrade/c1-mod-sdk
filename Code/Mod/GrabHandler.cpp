@@ -1010,14 +1010,13 @@ void CMultipleGrabHandler::Update(float frameTime)
 
 void CMultipleGrabHandler::Reset()
 {
-	std::for_each (m_handlers.begin(), m_handlers.end(), std::mem_fun (&CBaseGrabHandler::Reset));
+	for (CAnimatedGrabHandler* pHandler : m_handlers)
+	{
+		pHandler->Reset();
+		delete pHandler;
+	}
 
-	std::vector <CAnimatedGrabHandler*>::iterator it = m_handlers.begin();
-	std::vector <CAnimatedGrabHandler*>::iterator end = m_handlers.end();
-	for ( ; it != end; ++it)
-		delete *it;
-
-	m_handlers.erase (m_handlers.begin (), m_handlers.end ());
+	m_handlers.clear();
 }
 
 void CMultipleGrabHandler::Serialize(TSerialize ser)

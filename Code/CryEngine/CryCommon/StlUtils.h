@@ -22,6 +22,8 @@
 #define USE_HASH_MAP
 
 #if (_MSC_VER >= 1400) && !defined(_STLP_BEGIN_NAMESPACE) // Visual Studio 2005 without STLPort
+// TODO: replace <hash_map> with <unordered_map>
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include <hash_map>
 #undef std__hash_map
 #define std__hash_map stdext::hash_map
@@ -286,7 +288,7 @@ namespace stl
 	//! Case sensetive less key for any type convertable to const char*.
 	//////////////////////////////////////////////////////////////////////////
 	template <class Type>
-	struct less_strcmp : public std::binary_function<Type,Type,bool> 
+	struct less_strcmp
 	{
 		bool operator()( const Type &left,const Type &right ) const
 		{
@@ -297,7 +299,7 @@ namespace stl
 	//////////////////////////////////////////////////////////////////////////
 	//! Case insensetive less key for any type convertable to const char*.
 	template <class Type>
-	struct less_stricmp : public std::binary_function<Type,Type,bool> 
+	struct less_stricmp
 	{
 		bool operator()( const Type &left,const Type &right ) const
 		{

@@ -380,7 +380,7 @@ public:
 			}
 			else
 			{
-				sprintf(msg, "Game object extension with base %.8x for entity %s for RMI %s not found", (uint32)m_pRMI->pBase, pGameObject->GetEntity()->GetName(), m_pRMI->pMsgDef->description);
+				sprintf(msg, "Game object extension with base %p for entity %s for RMI %s not found", m_pRMI->pBase, pGameObject->GetEntity()->GetName(), m_pRMI->pMsgDef->description);
 				GameWarning("%s", msg);
 			}
 		}
