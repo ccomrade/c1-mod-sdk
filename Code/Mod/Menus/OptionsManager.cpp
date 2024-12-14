@@ -20,13 +20,71 @@ History:
 #include "Game.h"
 #include "HUD/HUD.h"
 
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+
+#define RESOURCE_CURSOR_AMBER 103
+#define RESOURCE_CURSOR_BLUE  104
+#define RESOURCE_CURSOR_GREEN 105
+#define RESOURCE_CURSOR_RED   106
+#define RESOURCE_CURSOR_WHITE 107
+
+static void ReloadCursor(ECrysisProfileColor color)
+{
+	HMODULE exe = GetModuleHandleA(nullptr);
+	HCURSOR cursor = nullptr;
+
+	switch (color)
+	{
+		case CrysisProfileColor_Amber:
+		{
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_AMBER));
+			break;
+		}
+		case CrysisProfileColor_Blue:
+		{
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_BLUE));
+			break;
+		}
+		case CrysisProfileColor_Green:
+		{
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_GREEN));
+			break;
+		}
+		case CrysisProfileColor_Red:
+		{
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_RED));
+			break;
+		}
+		case CrysisProfileColor_White:
+		{
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_WHITE));
+			break;
+		}
+		default:
+		{
+			// default green cursor
+			cursor = LoadCursorA(exe, MAKEINTRESOURCEA(RESOURCE_CURSOR_GREEN));
+			break;
+		}
+	}
+
+	if (cursor)
+	{
+		HWND window = static_cast<HWND>(gEnv->pRenderer->GetHWND());
+
+		//SetClassLongPtrA(window, GCLP_HCURSOR, reinterpret_cast<LONG_PTR>(cursor));
+		SetCursor(cursor);
+	}
+}
+
 //-----------------------------------------------------------------------------------------------------
 
-#define CRYSIS_PROFILE_COLOR_AMBER	"12612932"
-#define CRYSIS_PROFILE_COLOR_BLUE		"5079987"
-#define CRYSIS_PROFILE_COLOR_GREEN	"4481854"
-#define CRYSIS_PROFILE_COLOR_RED		"7474188"
-#define CRYSIS_PROFILE_COLOR_WHITE	"13553087"
+#define CRYSIS_PROFILE_COLOR_AMBER "12612932"
+#define CRYSIS_PROFILE_COLOR_BLUE  "5079987"
+#define CRYSIS_PROFILE_COLOR_GREEN "4481854"
+#define CRYSIS_PROFILE_COLOR_RED   "7474188"
+#define CRYSIS_PROFILE_COLOR_WHITE "13553087"
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -50,9 +108,38 @@ COptionsManager::COptionsManager() : m_pPlayerProfileManager(NULL)
 
 //-----------------------------------------------------------------------------------------------------
 
-void COptionsManager::SetCrysisProfileColor(const char *szValue)
+void COptionsManager::SetCrysisProfileColor(const char* color)
 {
+	if (!color)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Default;
+	}
+	else if (std::strcmp(color, CRYSIS_PROFILE_COLOR_AMBER) == 0)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Amber;
+	}
+	else if (std::strcmp(color, CRYSIS_PROFILE_COLOR_BLUE) == 0)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Blue;
+	}
+	else if (std::strcmp(color, CRYSIS_PROFILE_COLOR_GREEN) == 0)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Green;
+	}
+	else if (std::strcmp(color, CRYSIS_PROFILE_COLOR_RED) == 0)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Red;
+	}
+	else if (std::strcmp(color, CRYSIS_PROFILE_COLOR_WHITE) == 0)
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_White;
+	}
+	else
+	{
+		m_eCrysisProfileColor = CrysisProfileColor_Default;
+	}
 
+	ReloadCursor(m_eCrysisProfileColor);
 }
 
 //-----------------------------------------------------------------------------------------------------
