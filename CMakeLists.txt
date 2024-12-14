@@ -212,15 +212,6 @@ add_library(${CMAKE_PROJECT_NAME} MODULE
 
 ################################################################################
 
-set(MOD_RESOURCES
-	${PROJECT_SOURCE_DIR}/Code/Mod/Crysis.ico
-	${PROJECT_SOURCE_DIR}/Code/Mod/Cursor_White.cur
-)
-
-set_source_files_properties(Code/Mod/GameDll.rc PROPERTIES OBJECT_DEPENDS "${MOD_RESOURCES}")
-
-################################################################################
-
 # C++ version
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 14)
 

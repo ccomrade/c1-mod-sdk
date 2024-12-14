@@ -3,8 +3,6 @@
 // Used by GameDll.rc
 //
 #define VS_VERSION_INFO                 1
-#define IDC_CURSOR1                     101
-#define IDI_ICON1                       102
 #define IDB_CRYSIS                      103
 #define IDB_HEALTH                      104
 #define IDB_ENERGY                      105
