@@ -45,20 +45,6 @@ typedef char CHAR;
 #define IN
 #define OUT
 
-//#if !defined(_LIB)
-//# define _LIB 1
-//#endif
-
-#ifdef _LIB
-#if !defined(USE_STATIC_NAME_TABLE)
-#define USE_STATIC_NAME_TABLE 1
-#endif
-#endif
-
-#if !defined(_STLP_HASH_MAP)
-#define _STLP_HASH_MAP 1
-#endif
-
 // Enable memory address tracing code.
 #if !defined(MM_TRACE_ADDRS) // && !defined(NDEBUG) 
 #define MM_TRACE_ADDRS 1

@@ -19,40 +19,39 @@
 # pragma once
 #endif
 
+#include <unordered_map>
+
 #include <ISystem.h>
 #include <StlUtils.h>
 
 namespace SharedString
 {
-	template <class Key>
-	class hash_strcmp
+	struct NameHash
 	{
-	public:
-		enum {	// parameters for hash table
-			bucket_size = 4,	// 0 < bucket_size
-			min_buckets = 8	};// min_buckets = 2 ^^ N, 0 < N
+		static unsigned char ToLowerFast(unsigned char ch)
+		{
+			return ch | ((ch >= 'A' && ch <= 'Z') << 5);
+		}
 
-			size_t operator()( const Key& key ) const
+		size_t operator()(const char* key) const
+		{
+			unsigned int hash = 0;
+			for (; *key; ++key)
 			{
-				unsigned int h = 0; 
-				const char *s = stl::constchar_cast(key);
-				assert (s);
-				for (; *s; ++s) h = 5*h + tolower(*(unsigned char*)s);
-				return size_t(h);
-			};
+				hash = (5 * hash) + ToLowerFast(static_cast<unsigned char>(*key));
+			}
 
-			bool LessThan( const Key& key1,const Key& key2 ) const
-			{
-				return strcmp(stl::constchar_cast(key1),stl::constchar_cast(key2)) < 0;
-			}
-			bool Equals( const Key& key1,const Key& key2 ) const
-			{
-				return strcmp(stl::constchar_cast(key1),stl::constchar_cast(key2)) == 0;
-			}
+			return hash;
+		}
 	};
 
-
-	static const int HashTableSize = 1024;
+	struct NameEqual
+	{
+		bool operator()(const char* a, const char* b) const
+		{
+			return strcmp(a, b) == 0;
+		}
+	};
 
 	// Name entry header, immediately after this header in memory starts actual string data.
 	struct SNameEntry
@@ -74,7 +73,7 @@ namespace SharedString
 	{
 	public:
 		CNameTable()
-			: m_nameMap(HashTableSize)
+			: m_nameMap(1024)
 		{}
 
 		~CNameTable()
@@ -105,7 +104,7 @@ namespace SharedString
 				memcpy( pEntry->GetStr(),str,nLen+1 );
 
 				// put in map.
-				m_nameMap.insert( NameMap::value_type(pEntry->GetStr(),pEntry) );
+				m_nameMap[pEntry->GetStr()] = pEntry;
 			}
 			return pEntry;
 		}
@@ -122,18 +121,15 @@ namespace SharedString
 
 		void Dump()
 		{
-			CryLogAlways("NameTable: %d entries", m_nameMap.size());
-			NameMap::const_iterator iter = m_nameMap.begin();
-			NameMap::const_iterator iterEnd = m_nameMap.end();
-			while (iter != iterEnd)
+			CryLogAlways("NameTable: %u entries", static_cast<unsigned int>(m_nameMap.size()));
+			for (const auto& [name, pEntry] : m_nameMap)
 			{
-				CryLogAlways("'%s'", iter->first);
-				++iter;
+				CryLogAlways("'%s'", name);
 			}
 		}
+
 	private:
-		typedef stl::hash_map<const char*,SNameEntry*,hash_strcmp<const char*> > NameMap;
-		NameMap m_nameMap;
+		std::unordered_map<const char*, SNameEntry*, NameHash, NameEqual> m_nameMap;
 	};
 
 	///////////////////////////////////////////////////////////////////////////////

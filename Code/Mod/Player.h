@@ -18,6 +18,8 @@
 # pragma once
 #endif
 
+#include <memory>
+
 #include "Actor.h"
 #include "NanoSuit.h"
 #include <IActionMapManager.h>
@@ -779,7 +781,7 @@ protected:
 	SPlayerStats		m_stats;
 	SPlayerParams		m_params;
 	
-	std::auto_ptr<IPlayerInput> m_pPlayerInput;
+	std::unique_ptr<IPlayerInput> m_pPlayerInput;
 
 	// for foot/leg ik
 	Vec3 m_feetWpos[2];

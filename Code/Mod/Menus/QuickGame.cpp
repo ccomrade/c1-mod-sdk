@@ -144,7 +144,7 @@ struct CQuickGame::SQGServerList : public IServerListener
 		char strProductVersion[256];
 		gEnv->pSystem->GetProductVersion().ToString(strProductVersion);
 		m_ver = strProductVersion;
-		if(qg->m_ui.get())
+		if(qg->m_ui)
 			m_country = qg->m_ui->GetCountry();
 	}
 
@@ -388,7 +388,7 @@ m_stage(0),
 m_browser(0),
 m_searching(false)
 {
-  m_list.reset(new SQGServerList(this));
+  m_list = std::make_unique<SQGServerList>(this);
 }
 
 CQuickGame::~CQuickGame()
@@ -401,8 +401,8 @@ void CQuickGame::StartSearch(CMPHub* hub)
 
   if(hub)//if we want UI
   {
-    if(!m_ui.get())
-      m_ui.reset(new CQuickGameDlg(this));
+    if(!m_ui)
+      m_ui = std::make_unique<CQuickGameDlg>(this);
     m_ui->Show(hub);
   }
 
@@ -445,7 +445,7 @@ void CQuickGame::Cancel()
     m_searching = false;
   if(m_browser)
     m_browser->Stop();
-  if(m_ui.get())
+  if(m_ui)
     m_ui->Close();
   m_stage = 0;
 }
@@ -495,7 +495,7 @@ void CQuickGame::NextStage()
     m_browser = 0;
     m_stage = 0;
     m_searching = false;
-    if(m_ui.get())
+    if(m_ui)
       m_ui->OnFinished();
     break;
   }

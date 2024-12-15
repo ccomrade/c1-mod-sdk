@@ -213,7 +213,7 @@ add_library(${CMAKE_PROJECT_NAME} MODULE
 ################################################################################
 
 # C++ version
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 14)
+set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 
 target_include_directories(${CMAKE_PROJECT_NAME}
 	PRIVATE
