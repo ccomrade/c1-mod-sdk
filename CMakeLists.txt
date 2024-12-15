@@ -27,6 +27,8 @@ endif()
 configure_file(info.xml.in ${PROJECT_BINARY_DIR}/../info.xml)
 configure_file(logo.jpg ${PROJECT_BINARY_DIR}/../logo.jpg COPYONLY)
 
+configure_file(project.h.in ${PROJECT_BINARY_DIR}/project.h)
+
 ################################################################################
 
 add_library(${CMAKE_PROJECT_NAME} MODULE
@@ -222,6 +224,17 @@ add_library(${CMAKE_PROJECT_NAME} MODULE
 
 ################################################################################
 
+# dependencies of .rc files are not tracked automatically
+# https://gitlab.kitware.com/cmake/cmake/-/issues/16479
+set(GAME_DLL_RC_DEPENDENCIES
+	${PROJECT_SOURCE_DIR}/Code/Mod/resource.h
+	${PROJECT_BINARY_DIR}/project.h
+)
+
+set_source_files_properties(Code/Mod/GameDll.rc PROPERTIES OBJECT_DEPENDS "${GAME_DLL_RC_DEPENDENCIES}")
+
+################################################################################
+
 # C++ version
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 
@@ -230,4 +243,5 @@ target_include_directories(${CMAKE_PROJECT_NAME}
 		Code/CryEngine/CryAction
 		Code/CryEngine/CryCommon
 		Code/Mod
+		${PROJECT_BINARY_DIR}
 )

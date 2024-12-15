@@ -1,8 +1,5 @@
-//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by GameDll.rc
-//
-#define VS_VERSION_INFO                 1
+#pragma once
+
 #define IDB_CRYSIS                      103
 #define IDB_HEALTH                      104
 #define IDB_ENERGY                      105
@@ -47,14 +44,3 @@
 #define IDB_VEHICLE_BOAT                173
 #define IDB_BITMAP2                     174
 #define IDB_VEHICLE_HELICOPTER          174
-
-// Next default values for new objects
-// 
-#ifdef APSTUDIO_INVOKED
-#ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        175
-#define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1001
-#define _APS_NEXT_SYMED_VALUE           101
-#endif
-#endif
