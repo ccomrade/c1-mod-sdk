@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.15)
 
 ################################################################################
 
-project(MyMod LANGUAGES CXX RC)
+project(MyMod
+	VERSION 1.0.0.0
+	DESCRIPTION "Crysis Mod SDK"
+	HOMEPAGE_URL "https://github.com/ccomrade/c1-mod-sdk"
+	LANGUAGES CXX RC
+)
 
 ################################################################################
 
@@ -16,6 +21,11 @@ if(NOT CMAKE_MSVC_RUNTIME_LIBRARY)
 	# we don't want to bother our users with installing additional Visual C++ Redistributable
 	set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
+
+################################################################################
+
+configure_file(info.xml.in ${PROJECT_BINARY_DIR}/../info.xml)
+configure_file(logo.jpg ${PROJECT_BINARY_DIR}/../logo.jpg COPYONLY)
 
 ################################################################################
 

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mod name="${CMAKE_PROJECT_NAME}" version="${CMAKE_PROJECT_VERSION}" description="${CMAKE_PROJECT_DESCRIPTION}" url="${CMAKE_PROJECT_HOMEPAGE_URL}" screenshot="logo.jpg" />
