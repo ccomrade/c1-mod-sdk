@@ -481,7 +481,14 @@ bool CItem::SetGeometry(int slot, const ItemString& name, const Vec3& poffset, c
 		GetEntity()->InvalidateTM();
 	}
 
-	m_geometry[slot] = name ? name : "";
+	if (name)
+	{
+		m_geometry[slot] = name;
+	}
+	else
+	{
+		m_geometry[slot] = "";
+	}
 
 	ReAttachAccessories();
 

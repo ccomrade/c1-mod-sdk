@@ -52,7 +52,7 @@ public:
 
 	// Compare Traversers to see if they point to the same item
 	// If both unregistered, returns true
-	bool operator== (const CTweakTraverser &that);
+	bool operator== (const CTweakTraverser &that) const;
 
 	void Register(CTweakMenu * root);
 	void Deregister(void);

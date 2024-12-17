@@ -247,7 +247,7 @@ std::vector<CTweakCommon*> & CTweakTraverser::GetMenuItems(void) const {
 
 //-------------------------------------------------------------------------
 
-bool CTweakTraverser::operator== (const CTweakTraverser &that) {
+bool CTweakTraverser::operator== (const CTweakTraverser &that) const {
 	bool thisReg = IsRegistered();
 	bool thatReg = that.IsRegistered();
 	if (!thisReg && !thatReg) return true;

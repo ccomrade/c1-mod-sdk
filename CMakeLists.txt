@@ -236,7 +236,7 @@ set_source_files_properties(Code/Mod/GameDll.rc PROPERTIES OBJECT_DEPENDS "${GAM
 ################################################################################
 
 # C++ version
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 17)
+set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
 target_include_directories(${CMAKE_PROJECT_NAME}
 	PRIVATE

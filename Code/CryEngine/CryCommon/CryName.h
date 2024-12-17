@@ -207,13 +207,6 @@ inline bool	CCryName::operator>( const CCryName &n ) const {
 	return m_str > n.m_str;
 }
 
-inline bool	operator==( const string &s,const CCryName &n ) {
-	return n == s;
-}
-inline bool	operator!=( const string &s,const CCryName &n ) {
-	return n != s;
-}
-
 inline bool	operator==( const char *s,const CCryName &n ) {
 	return n == s;
 }
