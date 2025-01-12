@@ -24,6 +24,8 @@ endif()
 
 ################################################################################
 
+# prepare files in Crysis/Mods/MyMod/
+# PROJECT_BINARY_DIR is expected to be either Bin32/ or Bin64/ inside Crysis/Mods/MyMod/
 configure_file(info.xml.in ${PROJECT_BINARY_DIR}/../info.xml)
 configure_file(logo.jpg ${PROJECT_BINARY_DIR}/../logo.jpg COPYONLY)
 

@@ -1,0 +1,65 @@
+{
+	"version": 2,
+	"configurePresets": [
+		{
+			"name": "base-bin32",
+			"hidden": true,
+			"generator": "Ninja",
+			"binaryDir": "${sourceDir}/../Mods/MyMod/Bin32",
+			"architecture": {
+				"value": "x86",
+				"strategy": "external"
+			},
+			"cacheVariables": {
+				"CMAKE_C_COMPILER": "cl",
+				"CMAKE_CXX_COMPILER": "cl"
+			}
+		},
+		{
+			"name": "base-bin64",
+			"hidden": true,
+			"generator": "Ninja",
+			"binaryDir": "${sourceDir}/../Mods/MyMod/Bin64",
+			"architecture": {
+				"value": "x64",
+				"strategy": "external"
+			},
+			"cacheVariables": {
+				"CMAKE_C_COMPILER": "cl",
+				"CMAKE_CXX_COMPILER": "cl"
+			}
+		},
+		{
+			"name": "debug-bin32",
+			"inherits": "base-bin32",
+			"displayName": "Debug (32-bit)",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "debug-bin64",
+			"inherits": "base-bin64",
+			"displayName": "Debug (64-bit)",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "release-bin32",
+			"inherits": "base-bin32",
+			"displayName": "Release (32-bit)",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		},
+		{
+			"name": "release-bin64",
+			"inherits": "base-bin64",
+			"displayName": "Release (64-bit)",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	]
+}
