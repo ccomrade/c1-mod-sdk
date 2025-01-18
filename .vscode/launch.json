@@ -18,6 +18,22 @@
 			"cwd": "${workspaceFolder}"
 		},
 		{
+			"name": "Crysis (32-bit, DevMode, DX9)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin32/Crysis.exe",
+			"args": ["-dx9", "-devmode", "-mod", "MyMod"],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"name": "Crysis (32-bit, DevMode, DX10)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin32/Crysis.exe",
+			"args": ["-dx10", "-devmode", "-mod", "MyMod"],
+			"cwd": "${workspaceFolder}"
+		},
+		{
 			"name": "Crysis (64-bit, DX9)",
 			"type": "cppvsdbg",
 			"request": "launch",
@@ -34,6 +50,22 @@
 			"cwd": "${workspaceFolder}"
 		},
 		{
+			"name": "Crysis (64-bit, DevMode, DX9)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin64/Crysis.exe",
+			"args": ["-dx9", "-devmode", "-mod", "MyMod"],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"name": "Crysis (64-bit, DevMode, DX10)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin64/Crysis.exe",
+			"args": ["-dx10", "-devmode", "-mod", "MyMod"],
+			"cwd": "${workspaceFolder}"
+		},
+		{
 			"name": "Crysis Dedicated Server (32-bit)",
 			"type": "cppvsdbg",
 			"request": "launch",
@@ -43,11 +75,29 @@
 			"console": "newExternalWindow"
 		},
 		{
+			"name": "Crysis Dedicated Server (32-bit, DevMode)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin32/CrysisDedicatedServer.exe",
+			"args": ["-devmode", "-mod", "MyMod"],
+			"cwd": "${workspaceFolder}",
+			"console": "newExternalWindow"
+		},
+		{
 			"name": "Crysis Dedicated Server (64-bit)",
 			"type": "cppvsdbg",
 			"request": "launch",
 			"program": "../Bin64/CrysisDedicatedServer.exe",
 			"args": ["-mod", "MyMod"],
+			"cwd": "${workspaceFolder}",
+			"console": "newExternalWindow"
+		},
+		{
+			"name": "Crysis Dedicated Server (64-bit, DevMode)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "../Bin64/CrysisDedicatedServer.exe",
+			"args": ["-devmode", "-mod", "MyMod"],
 			"cwd": "${workspaceFolder}",
 			"console": "newExternalWindow"
 		}
