@@ -1,0 +1,16 @@
+{
+	"cmake.options.advanced": {
+		"launch": {
+			"statusBarVisibility": "hidden",
+			"projectStatusVisibility": "hidden"
+		},
+		"debug": {
+			"statusBarVisibility": "hidden",
+			"projectStatusVisibility": "hidden"
+		},
+		"workflow": {
+			"statusBarVisibility": "hidden",
+			"projectStatusVisibility": "hidden"
+		}
+	}
+}
