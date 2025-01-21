@@ -59,6 +59,8 @@ For more information, see the [official documentation](https://code.visualstudio
 > The repository (project) folder should be placed in Crysis folder.
 >
 > For example: `C:\GOG Games\Crysis\c1-mod-sdk`
+>
+> Crysis folder is expected to be writable without admin rights, so please avoid "Program Files".
 
 #### Using command line
 
