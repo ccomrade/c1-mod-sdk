@@ -229,7 +229,6 @@ add_library(${CMAKE_PROJECT_NAME} MODULE
 # dependencies of .rc files are not tracked automatically
 # https://gitlab.kitware.com/cmake/cmake/-/issues/16479
 set(GAME_DLL_RC_DEPENDENCIES
-	${PROJECT_SOURCE_DIR}/Code/Mod/resource.h
 	${PROJECT_BINARY_DIR}/project.h
 )
 
